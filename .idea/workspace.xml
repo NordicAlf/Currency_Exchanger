@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f495a4cc-3896-4de2-a6c4-f13afb9c6e45" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExchangerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExchangerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Exchanger.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Exchanger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ExchangerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ExchangerRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_21_074216_create_exchanger_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_21_074216_create_exchanger_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/exchanger.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/exchanger.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,8 +55,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="100" selection-start-column="100" selection-end-column="100" />
+              <first_editor relative-caret-position="140">
+                <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -383,12 +374,12 @@
       <workItem from="1571478178633" duration="6706000" />
       <workItem from="1571571081115" duration="7810000" />
       <workItem from="1571586319338" duration="4945000" />
-      <workItem from="1571637396819" duration="17140000" />
+      <workItem from="1571637396819" duration="17932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36601000" />
+    <option name="totallyTimeSpent" value="37393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1024" height="738" extended-state="6" />
@@ -649,8 +640,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="100" selection-start-column="100" selection-end-column="100" />
+          <first_editor relative-caret-position="140">
+            <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>
