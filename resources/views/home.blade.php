@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Вы зашли в систему. Перейдите на <a href="{{ route('exchanger.index') }}">главную страницу</a>
                 </div>
             </div>
         </div>

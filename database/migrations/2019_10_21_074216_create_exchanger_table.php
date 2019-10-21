@@ -13,15 +13,15 @@ class CreateExchangerTable extends Migration
      */
     public function up()
     {
-        Schema::create('exchanger', function (Blueprint $table) {
+        Schema::create('exchangers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
 
             $table->string('currency_in');
-            $table->integer('money_in');
+            $table->double('money_in');
 
             $table->string('currency_out');
-            $table->integer('money_out');
+            $table->double('money_out');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
@@ -35,6 +35,6 @@ class CreateExchangerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exchanger');
+        Schema::dropIfExists('exchangers');
     }
 }

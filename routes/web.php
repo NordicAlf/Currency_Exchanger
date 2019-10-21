@@ -16,4 +16,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/', 'ExchangerController')
-    ->names('exchanger');
+    ->names('exchanger')
+    ->middleware('auth');

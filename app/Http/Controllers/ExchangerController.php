@@ -5,15 +5,19 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ExchangerCreateFormRequest;
 use App\Models\Exchanger;
 use App\Repositories\ExchangerRepository;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ExchangerController extends Controller
 {
     private $exchangerRepository;
+    private $userRepository;
 
     public function __construct()
     {
         $this->exchangerRepository = app(ExchangerRepository::class);
+        $this->userRepository = app(UserRepository::class);
     }
 
     /**
@@ -23,8 +27,10 @@ class ExchangerController extends Controller
      */
     public function index()
     {
+        $user_id = $this->userRepository->getUserId();
+        $history = $this->exchangerRepository->getHistory($user_id); // get history current user
 
-        return view('exchanger');
+        return view('exchanger', compact('history'));
     }
 
     /**
@@ -47,12 +53,14 @@ class ExchangerController extends Controller
     {
         $dataExchanger = $request->all();
 
-        $funct = $this->exchangerRepository->convert($dataExchanger);
+        $dataExchanger['money_out'] = $this->exchangerRepository->convert($dataExchanger);
+        $dataExchanger['user_id'] = $this->userRepository->getUserId();
 
-        dd($funct);
-        //$item = (new Exchanger())->create($dataExchanger);
+        $item = (new Exchanger())->create($dataExchanger);
 
-
+        if ($item) {
+           return redirect()->route('exchanger.index');
+        }
     }
 
     /**

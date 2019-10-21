@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Exchanger extends Model
 {
+    protected $fillable = [
+        'user_id',
+        'currency_in',
+        'money_in',
+        'currency_out',
+        'money_out',
+    ];
+
     // relationship exchanger->user
     public function user()
     {

@@ -41,13 +41,15 @@
                             <th>В какую валюту</th>
                             <th>Результат</th>
                         </tr>
+                        @foreach($history as $row)
                         <tr>
-                            <td>20.09.2018</td>
-                            <td>USD</td>
-                            <td>200</td>
-                            <td>BYN</td>
-                            <td>400</td>
+                            <td>{{ $row->created_at }}</td>
+                            <td>{{ $row->currency_in }}</td>
+                            <td>{{ $row->money_in }}</td>
+                            <td>{{ $row->currency_out }}</td>
+                            <td>{{ round($row->money_out, 2) }}</td>
                         </tr>
+                        @endforeach
                     </table>
             </form>
         </div>

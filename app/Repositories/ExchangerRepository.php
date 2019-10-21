@@ -2,6 +2,8 @@
 
 namespace App\Repositories;
 
+use App\Models\Exchanger;
+
 class ExchangerRepository
 {
     /*
@@ -28,5 +30,15 @@ class ExchangerRepository
         $result = $amountOfMoney*$currency;
 
         return $result;
+    }
+
+    public function getHistory($user_id)
+    {
+        $history = Exchanger::with(['user:id'])
+            ->where('user_id', $user_id)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return $history;
     }
 }
