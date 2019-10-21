@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ExchangerCreateFormRequest;
 use App\Models\Exchanger;
+use App\Repositories\ExchangerRepository;
 use Illuminate\Http\Request;
 
 class ExchangerController extends Controller
 {
+    private $exchangerRepository;
+
+    public function __construct()
+    {
+        $this->exchangerRepository = app(ExchangerRepository::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,12 +23,7 @@ class ExchangerController extends Controller
      */
     public function index()
     {
-//        $apikey = '9eba2bd578bb5a52e148'; // add you api of account
-//
-//        $json = file_get_contents("https://free.currconv.com/api/v7/convert?q=USD_BYN,USD_EUR,USD_RUB,BYN_USD,BYN_EUR,BYN_RUB,RUB_USD,RUB_BYN,RUB_EUR&compact=ultra&apiKey={$apikey}");
-//        $obj = json_decode($json, true);
-//
-//        dd($obj);
+
         return view('exchanger');
     }
 
@@ -44,7 +47,9 @@ class ExchangerController extends Controller
     {
         $dataExchanger = $request->all();
 
-        dd($dataExchanger);
+        $funct = $this->exchangerRepository->convert($dataExchanger);
+
+        dd($funct);
         //$item = (new Exchanger())->create($dataExchanger);
 
 
