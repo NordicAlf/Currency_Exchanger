@@ -30,7 +30,7 @@
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                     </select>
-                    <input class="money" type="text" name="money_out" placeholder="Результат" value="" disabled>
+                    <input class="money" type="text" name="money_out" placeholder="Результат" value="@if(isset($money_out)) {{ round($money_out, 2) }} @endif" disabled>
                 </div>
                 <button class="submit" type="submit">ПЕРЕВОД</button>
                     <table class="history-table">
