@@ -8,29 +8,29 @@
             </div>
 
         <div class="row justify-content-center">
-            <form class="exchanger" action="" method="POST">
+            <form class="exchanger" action="{{ route('exchanger.store') }}" method="POST">
                 @csrf
                 <div class="block">
                     <div class="block-text"></div>
-                    <select class="option">
+                    <select class="option" name="currency_in" required>
                         <option selected disabled>Выберите валюту</option>
                         <option value="BYN">BYN</option>
                         <option value="RUB">RUB</option>
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                     </select>
-                    <input class="money" type="text" placeholder="Ввод денег">
+                    <input class="money" type="text" name="money_in" placeholder="Ввод денег" pattern="^[ 0-9]+$" required>
                 </div>
 
                 <div class="block">
-                    <select class="option">
+                    <select class="option" name="currency_out" required>
                         <option selected disabled>Выберите валюту</option>
                         <option value="BYN">BYN</option>
                         <option value="RUB">RUB</option>
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                     </select>
-                    <input class="money" type="text" placeholder="Результат" value="" disabled>
+                    <input class="money" type="text" name="money_out" placeholder="Результат" value="" disabled>
                 </div>
                 <button class="submit" type="submit">ПЕРЕВОД</button>
                     <table class="history-table">

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ExchangerCreateFormRequest;
+use App\Models\Exchanger;
 use Illuminate\Http\Request;
 
 class ExchangerController extends Controller
@@ -29,7 +31,7 @@ class ExchangerController extends Controller
      */
     public function create()
     {
-        //
+      //
     }
 
     /**
@@ -38,9 +40,14 @@ class ExchangerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ExchangerCreateFormRequest $request)
     {
-        //
+        $dataExchanger = $request->all();
+
+        dd($dataExchanger);
+        //$item = (new Exchanger())->create($dataExchanger);
+
+
     }
 
     /**
